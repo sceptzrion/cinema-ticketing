@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --poppins: 'Poppins', sans-serif;
+    
+    --light: #FFFFFF;
+    --grey: #564D4D;
+    --red: #DB0000;
+    --light-red: #FF0000;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--poppins);
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+hr {
+    width: 500px;
+    height: 1px;
+    background: var(--light);
+}
+
+#hero {
+    width: 100%;
+    max-height: 770px;
+    background-image: url(../img/bg\ section\ 1.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 75px;
+    padding-bottom: 100px;
+}
+
+#hero .header {
+    display: flex;
+    flex-direction: column;
+    color: var(--light);
+    text-align: center;
+    grid-gap: 10px;
+}
+
+#hero .header p {
+    font-size: 15px;
+    font-weight: 400;
+}
+
+#hero .form {
+    margin-top: 40px;
+    padding: 40px 50px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.50);
+    color: var(--light);
+    width: 500px;
+    justify-self: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+#hero .form form {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 15px;
+}
+
+#hero .form form div {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+}
+
+#hero .form form input {
+    width: 400px;
+    height: 40px;
+    border-radius: 10px;
+    padding: 0px 15px;
+    background: var(--light);
+    color: var(--grey);
+    font-size: 16px;
+    font-weight: 400;
+    font-family: var(--poppins);
+}
+
+#hero .form form div span.small-text {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+#hero .form form .button {
+    margin-top: 5px;
+}
+
+#hero .form form .button p {
+    color: var(--light-red);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+#hero .form form .button input {
+    height: 50px;
+    background: var(--red);
+    color: var(--light);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+#summary {
+    width: 100%;
+    max-height: 805px;
+    background-image: url(../img/bg\ section\ 2.png);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    padding-top: 75px;
+    padding-bottom: 100px;
+}
+
+#summary h2 {
+    color: var(--light);
+    text-align: center;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#summary .confirm {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 10px;
+    margin-top: 35px;
+    padding: 30px;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.75);
+    color: var(--light);
+    width: 560px;
+    justify-self: center;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#summary .confirm .ticket {
+    display: flex;
+    flex-direction: column;
+}
+
+#summary .confirm .ticket div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#summary .confirm div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#summary .confirm .subtotal {
+    font-weight: 600;
+}
+
+#summary .confirm .promo {
+    color: var(--light-red);
+    align-items: center;
+}
+
+#summary .confirm .promo .text {
+    display: flex;
+    flex-direction: column;
+}
+
+#summary .confirm .promo .text .small {
+    font-size: 10px;
+    font-weight: 400;
+}
+
+#summary .confirm .total {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#summary .buttons {
+    display: flex;
+    flex-direction: column;
+    grid-gap: 25px;
+    margin-top: 30px;
+    width: 560px;
+    justify-self: center;
+    color: var(--light);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+#summary .buttons button {
+    width: 100%;
+    height: 50px;
+    border-radius: 10px;
+    color: var(--light);
+    font-family: var(--poppins);
+    font-size: 20px;
+}
+
+#summary .buttons button.finish {
+    background: var(--red);
+    font-weight: 600;
+}
+
+#summary .buttons button.cancel {
+    background: var(--grey);
+    font-weight: 500;
+}
