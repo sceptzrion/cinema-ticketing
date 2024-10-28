@@ -96,25 +96,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "Masukkan jumlah tiket terlebih dahulu";
     } else {
         $data_valid = true;
+
+        //ambil data inputan
         $day = englishDaytoIndonesian(date("l", strtotime($_POST['movie-date'])));
         $date = date("d/m/Y", strtotime($_POST['movie-date']));
         $adult_ticket = $_POST['adult-ticket'];
         $children_ticket = $_POST['children-ticket'];
         $ticket_type = ticketType($day);
 
+        //tiket dewasa
         $adult = ticketInfo($adult_ticket, "Dewasa");
         $adPrice = ticketPrice($adult_ticket, "adult");
         $adPriceStr = priceInfoStr($adPrice);
+
+        //tiket anak-anak
         $children = ticketInfo($children_ticket, "Anak-anak");
         $chPrice = ticketPrice($children_ticket, "children");
         $chPriceStr = priceInfoStr($chPrice);
+
+        //hitung total tiket
         $totalTicket = $adult_ticket + $children_ticket;
         $weekendPrice = weekendPrice($ticket_type, $totalTicket);
         $weekendPriceStr = "Rp" . number_format($weekendPrice,0,',','.');
 
+        //hitung harga tiket
         $subtotal = $adPrice + $chPrice + $weekendPrice;
         $subtotalStr = "Rp" . number_format($subtotal,0,',','.');
         $total = $subtotal;
+
+        //cek apakah diskon
         if (isDiscount($subtotal)) {
             $discount = $subtotal * 0.1;
             $discountStr = "-Rp" . number_format($discount,0,',','.');
