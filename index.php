@@ -92,6 +92,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $error = "Harap masukkan tanggal penayangan film";
     } elseif ($_POST['adult-ticket'] < 0 || $_POST['children-ticket'] < 0) {
         $error = "Jumlah tiket yang dimasukkan tidak valid";
+    } elseif ($_POST['adult-ticket'] > 10 || $_POST['children-ticket'] > 10) {
+        $error = "Maksimum pembelian tiket masing-masing 10 tiket";
     } elseif ($_POST['adult-ticket'] + $_POST['children-ticket'] == 0) {
         $error = "Masukkan jumlah tiket terlebih dahulu";
     } else {
